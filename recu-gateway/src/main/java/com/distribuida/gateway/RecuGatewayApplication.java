@@ -27,7 +27,7 @@ public class RecuGatewayApplication {
 	    			)
 	    		.route( p->p
 	    				.path("/usuarios")
-	    				.uri( "https://127.0.0.1:7070" )
+	    				.uri( "http://127.0.0.1:7070" )
 	    			)
 	    		.build();
 	}

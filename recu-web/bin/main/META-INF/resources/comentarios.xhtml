@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <f:facet name="first">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+    </f:facet>
+    <title>Personas</title>
+
+    <link rel="stylesheet" href="${request.contextPath}/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="${request.contextPath}/css/jquery-ui.min.css"/>
+     
+    <script src="${request.contextPath}/js/jquery-3.3.1.min.js"></script>
+    <script src="${request.contextPath}/js/jquery-ui.min.js"></script>
+    <script src="${request.contextPath}/js/datepicker-es.js"></script>
+    <script src="${request.contextPath}/js/bootstrap.min.js"></script>
+    
+	<script lang="javascript">
+		
+		$( document ).ready(function() {
+
+			
+		});
+	
+		//
+	</script>    
+</h:head>
+
+<h:body>
+
+<h:form>
+	<div id="container">
+		<div class="row justify-content-md-center">
+			<div class="col-sm-6">
+				<br/>
+				<div class="row justify-content-md-center">
+					<h3>Comentarios</h3>
+				</div>
+
+				<h:dataTable value="#{postAction.posts}" var="item" styleClass="table">
+					<h:column>
+						<h:outputText value="${item.id}"/>
+					</h:column>
+					
+					<h:column>
+						<f:facet name="header">Name</f:facet>
+						<h:outputText value="${item.name}"/>
+					</h:column>
+
+					<h:column>
+						<h:commandLink value="Comentarios" actipon="{postAction.comentarios}"/>
+					</h:column>
+
+				</h:dataTable>
+			</div>
+		</div>
+	</div>
+</h:form>
+
+</h:body>
+
+</html>
